@@ -11,7 +11,7 @@ function Navbar(){
       <div className="container">
         <Link className="navbar-brand fw-bold" to="/">🛒 MyShop</Link>
         <div>
-          <Link className="nav-link d-inline me-3 text-white" to="/">Home</Link>
+          <Link className="nav-link d-inline me-3 text-white" to="/home">Home</Link>
           <Link className="nav-link d-inline text-white" to="/cart">Cart ({cart.length})</Link>
         </div> 
       </div>
@@ -25,7 +25,7 @@ const App = () => {
       <BrowserRouter>
       <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/cart" element={<CartPage />} />
         </Routes>
       </BrowserRouter>
